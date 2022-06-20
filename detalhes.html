@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/910a8d8915.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Detalhes de Filmes</title>
+</head>
+
+<body>
+    <header class="row" id="topo">
+        <div class="col-md-12">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <input type="checkbox" id="menuToggle">
+                <label for="menuToggle" class="menu-icon">
+                    <i class="fa fa-bars"></i>
+                    <i class="fa fa-times-circle"></i>
+                </label>
+                <a href="index.html" class="navbar-brand"><img src="imgs/logo.jpg" class="logo"></a>
+                <ul class="menu navbar-nav mr-auto text-center centralizar">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="detalhes.html">Detalhes do Filme<span class="sr-only">(página
+                                atual)</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#topo">Voltar ao topo</a>
+                    </li>
+                    <li>
+                        <form class="form-inline" onsubmit="event.preventDefault();pesquisarFilmes()">
+                            <input id="txtPesquisa" class="form-control mr-sm-2" type="text"
+                                placeholder="Pesquise um filme">
+                            <button class="btn btn-outline-success my-2 my-sm-0" onclick="pesquisarFilmes()"
+                                id="btnPesquisa" type="button">Pesquisar</button>
+                        </form>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Pesquisa: -->
+    <div class="parte0" id="parte0">
+        <div class="row">
+            <div id="resultado1"
+                style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, 'Arial Narrow', Arial, sans-serif; padding: 0px 50px;">
+            </div>
+            <div id="resultado2">
+            </div>
+        </div>
+    </div>
+
+    <div id="telaResultado">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="https://image.tmdb.org/t/p/w500/${dados.poster_path}" class="imgCard" alt="...">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <iframe src="https://www.youtube.com/embed/${dados.videos.results[0].key}"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        </div>
+                        <h5 class="card-title"><b>${dados.title}</b></h5>
+                        <p class="card-text" id="textDet"><b>Sinopse:</b> ${dados.overview}</p>
+                        <p class="lancamento-filme" id="textDet"><b>Lançamento: </b>${data.toLocaleDateString()}</p>
+                        <p class="gen" id="textDet"><b>Gênero:</b> ${dados.genres[1].name}</p>
+                        <p class="avaliacao" id="textDet"><b>Avaliação:</b> ${dados.vote_average}</p>
+                        <p class="card-text" id="textDet"><b>Duração:</b> ${dados.runtime} minutos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <footer>
+        <div class="row">
+            <div class="col-md-10 text-center footertexto">
+                <h5 style="padding-top: 25px;">Pipoca Filmes - DIW (PUC - MG)</h5>
+            </div>
+            <div class="col-md-2 text-center">
+                <img class="logofooter" src="imgs/logo.jpg" alt="">
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="detalhes.js"></script>
+</body>
+
+</html>

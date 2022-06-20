@@ -1,0 +1,303 @@
+
+#resultado1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#resultado2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.col-md-12 {
+    padding: 0px !important;
+}
+
+.row {
+    margin: 0px;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    display: grid;
+}
+iframe {
+    display:block; width:100%; border:none; margin: 10px;
+}
+
+.menu li {
+    padding: 0 20px;
+}
+
+#textDet {
+    text-align: justify !important;
+}
+
+#box-filmes-pop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#filmes-cinema {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#ultimosfilmes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.bg-dark {
+    background-color: black !important;
+}
+
+.centralizar {
+    margin: 0 auto !important;
+}
+
+.header {
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    margin-bottom: -300px !important;
+
+}
+
+.logo {
+    width: 70px;
+}
+
+.header-nav {
+    background-color: black;
+}
+
+.carrossel {
+    height: 100%;
+    width: 100%;
+}
+
+.btn-outline-success {
+    color: white;
+}
+
+.titulo {
+    font-weight: 700;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+.destaque {
+    padding: 20px;
+    margin-left: 70px;
+    vertical-align: bottom;
+}
+
+.btn-warning {
+    margin: 10px;
+}
+
+.parte1 {
+    background-color: #787878;
+    padding: 20px 0px;
+}
+
+.parte3 {
+    background-color: #787878;
+    padding: 20px 0px;
+}
+
+.emdestaque {
+    background-color: #787878;
+}
+
+.cardavaliacao {
+    background-color: #787878;
+    margin-bottom: 10px;
+}
+
+.btn-category {
+    margin: 20px 0px;
+}
+
+.img-thumbnail {
+    width: 100%;
+}
+
+.logofooter {
+    width: 75px;
+    height: 75px;
+}
+
+footer {
+    background-color: black;
+}
+
+.footertexto {
+    color: white;
+    vertical-align: middle !important;
+}
+
+.conteudomateria {
+    text-align: justify;
+}
+
+.margemnovidades {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.fa-brands {
+    width: 30px;
+}
+
+.partefinal {
+    background-color: #787878;
+}
+
+.partefinaltit {
+    background-color: #787878;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li {
+    margin-left: 10px;
+}
+
+.menu li a {
+    display: block;
+    padding: 10px;
+}
+
+#menuToggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.pDetalhes{
+    display:inline-flex
+}
+.card{
+    text-align: center;
+}
+
+
+@media screen and (max-width: 850px) {
+    .col-sm-6{
+        display: grid;
+    }
+    .card-body{
+        margin: 0 !important;
+    }
+    .imgCard{
+        width: 15rem;
+    }
+    .btn-outline-success {
+        background-color: black;
+    }
+
+    .form-inline {
+        justify-content: center !important;
+        padding: 0 50px;
+    }
+
+    .header {
+        position: fixed;
+        top: 0px;
+        width: 100%;
+    }
+
+    .header nav {
+        display: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .menu {
+        justify-content: center;
+        z-index: 998;
+        display: flex;
+        position: fixed;
+        flex-wrap: wrap;
+        align-content: center;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 0%;
+        background-color: rgba(0, 0, 0, 0.8);
+        overflow: hidden;
+        -webkit-transition: height 0.3s;
+        -moz-transition: height 0.3s;
+        -ms-transition: height 0.3s;
+        -o-transition: height 0.3s;
+        transition: height 0.3s;
+    }
+
+    .menu li {
+        display: block;
+        width: 100%;
+        margin-left: 0px;
+        margin-bottom: 20px;
+    }
+
+    .menu li a {
+        display: block;
+        text-align: center;
+        width: 100%;
+
+    }
+
+    .menu-icon {
+        width: 50px;
+        height: inherit;
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 30px;
+        line-height: 60px;
+        color: white;
+        z-index: 999;
+    }
+
+    #menuToggle:checked~label i:nth-child(2) {
+        display: block;
+        position: fixed;
+    }
+
+    #menuToggle:checked~label i:first-child {
+        display: none;
+        position: fixed;
+    }
+
+    #menuToggle:not(:checked)~label i:first-child {
+        display: block;
+    }
+
+    #menuToggle:not(:checked)~label i:nth-child(2) {
+        display: none;
+    }
+
+    #menuToggle:checked~ul {
+        height: 100%;
+    }
+
+    .menu-icon i {
+        font-size: 1.7em;
+    }
+}

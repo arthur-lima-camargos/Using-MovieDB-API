@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <!-- Meta tags Obrigatórias -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/910a8d8915.js" crossorigin="anonymous"></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="estilos.css">
+  <title>Pipoca Filmes</title>
+</head>
+
+<body>
+  <header class="row" id="topo">
+    <div class="col-md-12">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <input type="checkbox" id="menuToggle">
+        <label for="menuToggle" class="menu-icon">
+          <i class="fa fa-bars"></i>
+          <i class="fa fa-times-circle"></i>
+        </label>
+        <a href="index.html" class="navbar-brand"><img src="imgs/logo.jpg" class="logo"></a>
+        <ul class="menu navbar-nav mr-auto text-center centralizar">
+          <li class="nav-item active">
+            <a class="nav-link" href="#parte1">Filmes do Momento <span class="sr-only">(página atual)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#parte2">Últimos Lançamentos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#parte3">Filmes Mais Procurados</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#topo">Voltar ao topo</a>
+          </li>
+          <li>
+            <form class="form-inline" onsubmit="event.preventDefault();pesquisarFilmes()">
+              <input id="txtPesquisa" class="form-control mr-sm-2" type="text" placeholder="Pesquise um filme">
+              <button class="btn btn-outline-success my-2 my-sm-0" onclick="pesquisarFilmes()" id="btnPesquisa"
+                type="button">Pesquisar</button>
+            </form>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- Pesquisa: -->
+  <div class="parte0" id="parte0">
+    <div class="row">
+      <div id="resultado1"
+        style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, 'Arial Narrow', Arial, sans-serif; padding: 0px 50px;">
+      </div>
+      <div id="resultado2">
+      </div>
+    </div>
+  </div>
+
+  <!-- Filmes do Momento: -->
+  <div class="parte1" id="parte1">
+    <div class="row">
+      <div class="col-md-12 form-group">
+        <h1 class="titulo">Filmes do Momento</h1>
+      </div>
+      <div id="box-filmes-pop">
+      </div>
+    </div>
+  </div>
+
+  <!-- Últimos Filmes: -->
+  <div class="parte2 form-group" id="parte2">
+    <div class="row">
+      <div class="col-md-12 form-group">
+        <h1 class="titulo" style="margin-top: 20px;">Últimos Lançamentos</h1>
+      </div>
+
+      <div id="ultimosfilmes">
+      </div>
+    </div>
+  </div>
+
+  <!-- Filmes Procurados: -->
+  <div class="parte3" id="parte3">
+    <div class="row">
+      <div class="col-md-12 form-group">
+        <h1 class="titulo">Filmes Mais Procurados</h1>
+      </div>
+      <div id="filmes-cinema">
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="row">
+      <div class="col-md-10 text-center footertexto">
+        <h5 style="padding-top: 25px;">Pipoca Filmes - DIW (PUC - MG)</h5>
+      </div>
+      <div class="col-md-2 text-center">
+        <img class="logofooter" src="imgs/logo.jpg" alt="">
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript (Opcional) -->
+  <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
