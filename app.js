@@ -6,6 +6,7 @@ function execFilmesPopulares() {
     xhr.open('GET', 'https://api.themoviedb.org/3/movie/popular?api_key=0e3049e1ed7add499dce2af14c06f64f&language=pt-BR&page=1', true);
     xhr.send();
 }
+
 function exibeFilmesPop() {
     let divTela = document.getElementById('box-filmes-pop');
     let texto = '';
